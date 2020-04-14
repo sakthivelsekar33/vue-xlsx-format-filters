@@ -1,7 +1,14 @@
 var VueXlsxFormatFilters = {
-  install: function(vue, options) {
+  install: function(Vue, options) {
     console.log('Installing VueXlsxFormatFilters')
-    console.log(vue, options)
+    console.log(options)
+
+    Vue.filter('try', function(number) {
+      console.log('hi')
+      return number * 2.00
+    })
+
+    console.log(Vue.filter('try')(30))
   }
 }
 
